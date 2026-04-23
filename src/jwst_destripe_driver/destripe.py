@@ -6,6 +6,10 @@ import sys
 
 import numpy as np
 from astropy.io import fits
+
+# Ensure pyimcom picks JWST settings when running this JWST-specific driver.
+os.environ.setdefault("INSTRUMENT", "NIRCAM")
+
 from pyimcom import imdestripe
 from pyimcom.config import Settings, JWST
 
@@ -54,14 +58,34 @@ def destripe(cfg_file, noiseid=None, verbose=False, max_files=None, testing=Fals
     # (file, identifier)
     fdir, fileprefix = os.path.split(file_prefix)
     n = len(fileprefix)
-    numus = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "_"}
+    allowed_middle_chars = {
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "_",
+        "n",
+        "r",
+        "c",
+        "b",
+    }
 
     use_files = []
     for f in os.listdir(fdir):
         if len(use_files) == max_files:
             break
         # What does this do? It checks if the file starts with the prefix, ends with _crf.fits, and has only numbers and underscores in the middle part. If so, it adds it to the list of files to use.
-        if f[:n] == fileprefix and f[-9:] == "_crf.fits" and all(c in numus for c in f[n:-9]):
+        if (
+            f[:n] == fileprefix
+            and f[-9:] == "_crf.fits"
+            and all(c in allowed_middle_chars for c in f[n:-9])
+        ):
             use_files.append((os.path.join(fdir, f), f[n:-9])) # adds the full path and the identifier (the part between the prefix and _crf.fits)
 
     if verbose:
@@ -91,7 +115,7 @@ def destripe(cfg_file, noiseid=None, verbose=False, max_files=None, testing=Fals
         os.remove(p)
 
     # main destriping
-    dsout = imdestripe.main(cfg_file, overlaponly=False, testing=testing)
+    dsout = imdestripe.main(cfg_file, overlaponly=False)
     if verbose:
         print("Output -->", dsout)
         print("")
