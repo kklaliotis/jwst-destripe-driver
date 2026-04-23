@@ -1,64 +1,47 @@
 {
-    "OBSFILE": "/users/PCON0003/cond0007/imcom/pyimcom/anlsim/Roman_WAS_obseq_11_1_23.fits",
+    "OBSFILE": "None",
     "INDATA": [
-        "/fs/scratch/PCON0003/cond0007/fall2025/sim/L2",
-        "L2_2506"
+        "None",
+        "None"
     ],
     "CTR": [
-	9.55,
-	-44.1
+	0,
+	0
     ],
-    "LONPOLE": 180.0,
+    "LONPOLE": 0,
     "OUTSIZE": [
-        72,
-	34,
-	0.049019607843137254
+        0,
+	0,
+	0
     ],
-    "BLOCK": 12,
-    "FILTER": 2,
-    "LAKERNEL": "Cholesky",
+    "BLOCK": 0,
+    "FILTER": 0,
+    "LAKERNEL": "None",
     "KAPPAC": [
-         5e-4
+         0
     ],
     "INPSF": [
-	"/fs/scratch/PCON0003/cond0007/fall2025/psf",
-        "L2_2506",
-        6
+	"None",
+        0
     ],
-    "EXTRAINPUT": [
-        "truth,0.004906087669824225",
-        "gsstar14",
-        "nstar14,2e5,86,3",
-        "gsext14,seed=100",
-        "gsext14,seed=100,shear=0.02:0",
-        "gsext14,seed=100,shear=0:0.02",
-        "gsext14,seed=100,shear=-0.02:0",
-        "gsext14,seed=100,shear=0:-0.02",
-        "1fnoise9",
-        "whitenoise10",
-        "noise,Rz4PbrS2C1",
-        "noise,Rz4PbrS2C2",
-        "noise,Rz4PrS2C3",
-        "noise,Rz4PrS2C4"
-    ],
-    "PADSIDES": "all",
-    "OUTMAPS": "USTN",
-    "OUT": "/fs/scratch/PCON0003/cond0007/fall2025/coadd_H2/testmosaic_H2",
-    "INPAD": 0.80,
-    "NPIXPSF": 36,
-    "FADE": 1,
-    "PAD": 1,
-    "NOUT": 1,
-    "OUTPSF": "GAUSSIAN",
-    "EXTRASMOOTH": 0.9265328730414752,
-    "TEMPFILE": "/fs/scratch/PCON0003/cond0007/tmp/pyimcomrun_2X",
-    "INLAYERCACHE": "/fs/scratch/PCON0003/cond0007/fall2025/H-cache2/r1",
-    "PSFSPLIT": [5.25, 8.75, 0.01],
+    "PADSIDES": "None",
+    "OUTMAPS": "None",
+    "OUT": "None",
+    "INPAD": 0,
+    "NPIXPSF": 0,
+    "FADE": 0,
+    "PAD": 0,
+    "NOUT": 0,
+    "OUTPSF": "None",
+    "EXTRASMOOTH": 0,
+    "TEMPFILE": "None",
+    "INLAYERCACHE": "None",
+    "PSFSPLIT": [0, 0, 0],
 
     "DSMODEL": ["constant",
-        4088],
-    "DSOBSFILE": "/fs/scratch/PCON0003/cond0007/temp_kl/t_",
-    "DSOUT": ["/fs/scratch/PCON0003/klaliotis/imdestripe/mosaic_test_v3/",
+        2048],
+    "DSOBSFILE": "/fs/scratch/PCON0003/path/jw",
+    "DSOUT": ["/fs/scratch/PCON0003/path/jwst-destripe/",
         "_ds_out.txt"
     ],
     "CGMODEL": ["PR",
