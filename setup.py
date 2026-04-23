@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-        name="templatecode",
+        name="jwst-destripe-driver",
         version="0.0",
         packages=find_packages(),
         install_requires=[
