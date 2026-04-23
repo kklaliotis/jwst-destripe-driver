@@ -1,10 +1,10 @@
-# Welcome to our organization's code demo repository
+# JWST-destripe-driver
 
-This code repository (or "repo") is designed to demonstrate one way to organise your code and provides some suggested auxiliary files like .gitignore for example. It assumes your repository is mainly Python code.
+This repo is a simple driver (with a few utils) to run image destriping via pyimcom.imdestripe on JWST images.
 
 # Get code
 
-`git clone git@github.com:Roman-HLIS-Cosmology-PIT/template-code-repo.git`
+`git clone git@github.com:Roman-HLIS-Cosmology-PIT/jwst-destripe-driver.git`
 
 # Install code
 
@@ -12,28 +12,6 @@ This code repository (or "repo") is designed to demonstrate one way to organise 
 
 # Run
 
-`python templatecode`
+`python run.py <config>`
 
-Or open up the Jupyter Notebook called `demos/template-demo.ipynb` and have a look around.
-
-# Contribute
-
-* Ask Dida to add you to the repo,
-* Clone as above,
-* Make sure you `pip install -e .`,
-* Make changes,
-* `git fetch`,
-* `git pull --rebase`,
-* `git add [files you changed]`,
-* `git commit [nice description of what you did]`,
-* `git fetch`,
-* `git status`, and if the status is clean:
-* `git push`.
-
-# Data
-
-Make sure to place all data in folders hidden to git. Make two new folders in the root directory and this template is already set up so that git will ignore them:
-`inputs/`
-`outputs/`
-
-Thanks for playing!
+This repo is developed and maintained by Katherine Laliotis and Devisree Tallapaneni.
