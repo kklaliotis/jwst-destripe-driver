@@ -12,4 +12,4 @@ import sys
 from roman_hlis_l2_driver.destripe_interface.destripe import destripe
 
 
-destripe(sys.argv[1], verbose=True)
+destripe(sys.argv[1], verbose=True, testing=True)

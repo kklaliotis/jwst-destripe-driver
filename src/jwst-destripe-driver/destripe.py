@@ -10,7 +10,7 @@ from pyimcom import imdestripe
 from pyimcom.config import Settings, JWST
 
 
-def destripe(cfg_file, noiseid=None, verbose=False, max_files=None):
+def destripe(cfg_file, noiseid=None, verbose=False, max_files=None, testing=False):
     """
     Destripes one layer from the indicated set of files.
 
@@ -28,6 +28,8 @@ def destripe(cfg_file, noiseid=None, verbose=False, max_files=None):
         Otherwise, does the science layer.
     verbose : bool, optional
         Whether to talk a lot to the output.
+    testing:  bool, optional
+        Whether this is a test run. Triggers additional outputs and figures
 
     Returns
     -------
@@ -89,7 +91,7 @@ def destripe(cfg_file, noiseid=None, verbose=False, max_files=None):
         os.remove(p)
 
     # main destriping
-    dsout = imdestripe.main(cfg_file, overlaponly=False)
+    dsout = imdestripe.main(cfg_file, overlaponly=False, testing=testing)
     if verbose:
         print("Output -->", dsout)
         print("")
