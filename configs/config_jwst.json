@@ -15,13 +15,14 @@
 	0
     ],
     "BLOCK": 0,
-    "FILTER": 0,
+    "FILTER": "F187N",
     "LAKERNEL": "None",
     "KAPPAC": [
          0
     ],
     "INPSF": [
 	"None",
+        0,
         0
     ],
     "PADSIDES": "None",
@@ -40,8 +41,8 @@
 
     "DSMODEL": ["constant",
         2048],
-    "DSOBSFILE": "/fs/scratch/PCON0003/path/jw",
-    "DSOUT": ["/fs/scratch/PCON0003/path/jwst-destripe/",
+    "DSOBSFILE": "/fs/scratch/PCON0003/klaliotis/imdestripe/jwst/ngc2997/jw",
+    "DSOUT": ["/fs/scratch/PCON0003/klaliotis/imdestripe/jwst/ngc2997_out/",
         "_ds_out.txt"
     ],
     "CGMODEL": ["PR",
