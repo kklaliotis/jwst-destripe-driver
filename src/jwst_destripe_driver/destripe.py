@@ -47,7 +47,6 @@ def destripe(cfg_file, noiseid=None, verbose=False, max_files=None, testing=Fals
         cfg = json.load(file)
 
     if JWST: Settings.jwst()
-    filter = Settings.RomanFilters[cfg["FILTER"]]
 
     # add tails as needed
     file_prefix = cfg["DSOBSFILE"]
@@ -115,7 +114,7 @@ def destripe(cfg_file, noiseid=None, verbose=False, max_files=None, testing=Fals
         os.remove(p)
 
     # main destriping
-    dsout = imdestripe.main(cfg_file, overlaponly=False)
+    dsout = imdestripe.main(cfg_file, overlaponly=False, testing=testing)
     if verbose:
         print("Output -->", dsout)
         print("")
