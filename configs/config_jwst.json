@@ -52,5 +52,6 @@
     "DSCOST": ["quadratic",
         0,
         0
-        ]
+        ],
+    "AMPCOLS": 512
 }
