@@ -25,7 +25,7 @@ from scipy.fft import fft
 
 
 NROWS = 2048
-AMPCOLS = None
+AMPCOLS = 512
 
 cmap = plt.get_cmap("inferno")
 dark_color = cmap(0.15)
