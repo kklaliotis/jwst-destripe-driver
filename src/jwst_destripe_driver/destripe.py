@@ -101,7 +101,7 @@ def destripe(cfg_file, noiseid=None, verbose=False, max_files=None, testing=Fals
     clearfiles += glob.glob(os.path.join(cfg["DSOUT"][0], "*.fits"))
     if noiseid is None:
         # files to clear only the first time; these are reused for each noise layer
-        clearfiles += glob.glob(os.path.join(cfg["DSOUT"][0], "ovmat.npy"))
+        # clearfiles += glob.glob(os.path.join(cfg["DSOUT"][0], "ovmat.npy"))
         clearfiles += glob.glob(os.path.join(cfg["DSOUT"][0], "SCA_list.txt"))
         clearfiles += glob.glob(os.path.join(cfg["DSOUT"][0], "*.out"))
     if verbose:
